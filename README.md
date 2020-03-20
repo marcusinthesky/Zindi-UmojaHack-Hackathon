@@ -1,0 +1,2 @@
+# UmojaHack
+A Zindi Hackathon. 
