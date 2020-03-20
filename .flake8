@@ -1,0 +1,14 @@
+[flake8]
+max-line-length = 100
+ignore =
+        # E203 is not PEP8 compliant https://github.com/ambv/black#slices
+        E203,
+        # E402 module level import not at top of file
+        E402,
+        # W503 and W504 is not PEP8 compliant https://github.com/ambv/black#line-breaks--binary-operators
+        W503,
+        W504,
+        # W605 incorrectly flags regex fields
+        W605
+
+exclude = notebooks/*
