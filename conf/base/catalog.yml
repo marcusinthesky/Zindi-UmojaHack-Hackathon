@@ -57,11 +57,11 @@ xente_categories:
   filepath: data/01_raw/xente/PID_Categories.csv
 
 # features
-xente_X_train_features:
+xente_features:
   type: pandas.ParquetDataSet
   filepath: data/04_features/xente_X_train_features.parquet
 
-xente_X_test_features:
+xente_target:
   type: pandas.ParquetDataSet
   filepath: data/04_features/xente_X_test_features.parquet
 
