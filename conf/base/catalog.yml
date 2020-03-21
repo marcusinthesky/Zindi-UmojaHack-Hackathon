@@ -56,6 +56,25 @@ xente_categories:
   type: pandas.CSVDataSet
   filepath: data/01_raw/xente/PID_Categories.csv
 
+
+# mask
+xente_sample_submission_wide:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/xente/SampleSubmission.csv
+
+xente_merged:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/xente_merged.parquet
+
+# embedding
+PID_embedding:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/xente_merged.parquet
+
+acc_embedding:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/xente_merged.parquet
+
 # features
 xente_features:
   type: pandas.ParquetDataSet
@@ -82,3 +101,5 @@ xente_y_submission:
   type: pandas.CSVDataSet
   filepath: data/08_reporting/xente_y_submission.csv
   versioned: true
+  save_args:
+    index: False
