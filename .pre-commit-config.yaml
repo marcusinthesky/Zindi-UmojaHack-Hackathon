@@ -16,13 +16,13 @@ repos:
     rev: stable
     hooks:
     - id: black
-      exclude: umoja/[a-z_/]+/tests/[a-z_]+.py$
+      exclude: src/umoja/[a-z_/]+/tests/[a-z_]+.py$
 
 -   repo: https://gitlab.com/pycqa/flake8
     rev: 3.7.9
     hooks:
     - id: flake8
-      exclude: umoja/[a-z_/]+/tests/[a-z_]+.py$
+      exclude: src/umoja/[a-z_/]+/tests/[a-z_]+.py$
 
 -   repo: local
     hooks:

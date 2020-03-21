@@ -43,8 +43,45 @@
 # This is a data set used by the "Hello World" example pipeline provided with the project
 # template. Please feel free to remove it once you remove the example pipeline.
 
-example_iris_data:
+# Raw
+xente_X_train:
   type: pandas.CSVDataSet
   filepath: data/01_raw/iris.csv
+
+xente_X_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+
+xente_y_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+
+
+# features
+xente_X_train_features:
+type: pandas.ParquetLocalDataSet(
+filepath: data/04_features/xente_X_train_features.parquet
+
+xente_X_test_features:
+  type: pandas.ParquetLocalDataSet(
+  filepath: data/04_features/xente_X_test_features.parquet
+
+# models
+xente_xgb:
+  type: kedro.io.PickleLocalDataSet
+  filepath: data/06_models/xgboost.pkl
+  versioned: true
+
+# model output
+xente_y_prediction:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/xente_y_prediction.csv
+  versioned: true
+
+# reporting
+xente_y_submission:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/xente_y_submission.csv
+  versioned: true
 
 
