@@ -58,11 +58,11 @@ xente_categories:
 
 # features
 xente_X_train_features:
-  type: ParquetLocalDataSet
+  type: pandas.ParquetDataSet
   filepath: data/04_features/xente_X_train_features.parquet
 
 xente_X_test_features:
-  type: ParquetLocalDataSet
+  type: pandas.ParquetDataSet
   filepath: data/04_features/xente_X_test_features.parquet
 
 # models
