@@ -44,26 +44,25 @@
 # template. Please feel free to remove it once you remove the example pipeline.
 
 # Raw
-xente_X_train:
+xente_train:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/iris.csv
+  filepath: data/01_raw/xente/Train.csv
 
-xente_X_test:
+xente_sample_submission:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/iris.csv
+  filepath: data/01_raw/xente/SampleSubmission.csv
 
-xente_y_train:
+xente_categories:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/iris.csv
-
+  filepath: data/01_raw/xente/PID_Categories.csv
 
 # features
 xente_X_train_features:
-type: pandas.ParquetLocalDataSet(
-filepath: data/04_features/xente_X_train_features.parquet
+  type: ParquetLocalDataSet
+  filepath: data/04_features/xente_X_train_features.parquet
 
 xente_X_test_features:
-  type: pandas.ParquetLocalDataSet(
+  type: ParquetLocalDataSet
   filepath: data/04_features/xente_X_test_features.parquet
 
 # models
@@ -83,5 +82,3 @@ xente_y_submission:
   type: pandas.CSVDataSet
   filepath: data/08_reporting/xente_y_submission.csv
   versioned: true
-
-

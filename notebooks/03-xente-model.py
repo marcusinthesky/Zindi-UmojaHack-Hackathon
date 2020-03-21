@@ -9,6 +9,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer, PolynomialFeatures
 from sklearn.svm import SVC
 from skopt import BayesSearchCV
+from sklearn.metrics import f1_score
 
 #%%
 #setup logging
@@ -49,6 +50,7 @@ opt = BayesSearchCV(
     params,
     n_iter=3,
     cv=schema,
+    scoring=f1_score
 )
 
 
